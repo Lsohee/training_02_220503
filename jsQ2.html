@@ -9,8 +9,8 @@
 <body>
   <div id="root">
     hello
-    <button>dark</button>
     <button>bright</button>
+    <!-- <button>bright</button> -->
   </div>
 
   <script>
@@ -30,17 +30,26 @@ root.style.height = "100vh";
 root.style.backgroundColor = "#ccc"
 
 // 이벤트 넣기
+
+let clickValue = true;
+
 btnOne.addEventListener("click", function(){
-  root.style.backgroundColor = "#000000"
-  root.style.color = "#ffffff"
+  if(clickValue === true){
+    root.style.backgroundColor = "#000000";
+    root.style.color = "#ffffff";
+    btnOne.textContent = "dark";
+    console.log("okay");
+    clickValue = false; // let clickValue = false 로 하면 작동 안됨 => 왜?
+  } else{
+    console.log("fine");
+    root.style.backgroundColor = "#ffffff"
+    root.style.color = "#000000"
+    btnOne.textContent = "bright";
+    clickValue = true;
+  }
 })
 
 
-btnTwo.addEventListener("click", function(){
-  root.style.backgroundColor = "#ffffff"
-  root.style.color = "#000000"
-})
-    
   </script>
   
   
