@@ -40,6 +40,20 @@ btnOne.addEventListener("click", function(){
     btnOne.textContent = "dark";
     console.log("okay");
     clickValue = 1; // let clickValue = false 로 하면 작동 안됨 => 왜?
+    
+    /* let clickValue = false로 써버리면 변수 자체를 다시 선언한게 되어버림 -> 같은 이름의 변수 선언을 2번함 
+    1. 이사람(a) 이름은 임소희이다 
+    2. 이사람(a) 이름은 임소원이다
+    라고 두번 새기는 것 -> 작동이 안됨
+
+    반면에 
+    clickValue = false는 이미 선언된 변수에 값만 다르게 대입한것 === 재할당
+
+    let clickValue ; -> 변수 선언 / 여러번 할 수 없음
+    clickValue = true ; -> 값을 할당 / 다른 값을 여러번 대입할 수 있음
+    
+    */
+  
   } else if (clickValue===1){
     console.log("fine");
     root.style.backgroundColor = "#c4c4c4"
@@ -55,6 +69,7 @@ btnOne.addEventListener("click", function(){
 
   }
 })
+
 
 
   </script>
