@@ -7,22 +7,69 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="root">
-    <input type="range">
-  </div>
+  <div id="root"></div>
 
   <script>
-    const root = document.getElementById("root");
-    console.dir(root);
-    const input = root.children[0];
-    console.dir(input);
-    let value = input.valueAsNumber;
-    
-    //  value 값을 rgb값과 연결시키는 방법
-    //  value 값을 바꾸면 rgb값이 바뀌게
-    //  value 값을 rgb값으로 변환...?
-    
-  </script>
+  const root = document.getElementById("root");
+  const practics = ["피카츄", "라이츄", "파이리", "꼬부기", "버터풀", "야도란", "피죤투", "또가스"];
+
+  root.style.width = "100vw";
+  root.style.height = "100vh";
+
   
+  
+  
+  
+  // 이벤트
+  //  i ++ 이 적용이 안됩니다
+  
+  root.addEventListener("click", function(){
+    // const head = document.createElement("h1");
+    
+    //   root.appendChild(head);
+    //   console.dir(head);
+      
+      for(let i =0; i<practics.length; i++){
+        console.log(i);
+        // head.textContent = practics[i];
+        // 한번 클릭 할때마다 한개씩 찍히게 하고 싶음
+        // 왜 모든 숫자가 다찍힐까?
+        
+      }
+      
+      // if (i === practics.length){
+      //   head.textContent ="포켓몬을 다 모았다";
+        
+      // }
+
+    
+  })
+
+
+
+
+  /*성공 버전
+  // let i = -1;
+
+  // root.addEventListener("click", function(){
+  //   const head = document.createElement("h1");
+    
+  //     root.appendChild(head);
+  //     console.dir(head);
+      
+  //     if (i<practics.length){
+  //     head.textContent = practics[i];
+  //     i = i+1;
+  //   }
+  //   if (i===practics.length){
+  //     head.textContent ="포켓몬을 다 모았다";
+  //     i=0
+  //     // console.log(i);
+  //   }
+    
+  // });
+  * 한번만 반복하게 하고 싶음 -> 어떻게 제어?
+*/
+</script>
 </body>
 </html>

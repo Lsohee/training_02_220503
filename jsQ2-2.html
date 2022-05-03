@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <input type="range">
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    console.dir(root);
+    const input = root.children[0];
+    console.dir(input);
+    let value = input.valueAsNumber;
+    
+    //  value 값을 rgb값과 연결시키는 방법
+    //  value 값을 바꾸면 rgb값이 바뀌게
+    //  value 값을 rgb값으로 변환...?
+    
+  </script>
+  
+</body>
+</html>
