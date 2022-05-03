@@ -27,25 +27,32 @@ const btnTwo = root.children[1];
 // root 스타일링
 root.style.width = "100vw";
 root.style.height = "100vh";
-root.style.backgroundColor = "#ccc"
+// root.style.backgroundColor = "#ccc"
 
 // 이벤트 넣기
 
-let clickValue = true;
+let clickValue = 0;
 
 btnOne.addEventListener("click", function(){
-  if(clickValue === true){
+  if(clickValue === 0){
     root.style.backgroundColor = "#000000";
     root.style.color = "#ffffff";
     btnOne.textContent = "dark";
     console.log("okay");
-    clickValue = false; // let clickValue = false 로 하면 작동 안됨 => 왜?
-  } else{
+    clickValue = 1; // let clickValue = false 로 하면 작동 안됨 => 왜?
+  } else if (clickValue===1){
     console.log("fine");
+    root.style.backgroundColor = "#c4c4c4"
+    root.style.color = "#000000"
+    btnOne.textContent = "gray";
+    clickValue = 2;
+  }else if(clickValue === 2){
+    console.log("good");
     root.style.backgroundColor = "#ffffff"
     root.style.color = "#000000"
     btnOne.textContent = "bright";
-    clickValue = true;
+    clickValue = 0;
+
   }
 })
 
