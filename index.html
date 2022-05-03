@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+    console.log(root);
+    console.dir(root);
+
+
+    
+    let black = "#000000"
+    root.style.backgroundColor = black;
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    
+    const make = document.createElement("button");
+    root.appendChild(make);
+    
+
+    if( black === "#000000"){
+      make.addEventListener("click", function(){
+        let black = "#fffffff"
+        root.style.backgroundColor = black;
+      });
+    }
+    // if(black === "#ffffff"){
+    //   make.style.backgroundColor("click", function(){
+    //   let black = "#000000";
+    //   root.style.backgroundColor = black;
+  
+    //   });
+
+    
+
+
+
+    // let changeOne = 0;
+    // let clickValue = changeOne;
+    
+    // if (root.style.backgroundColor === black ){
+    //   make.addEventListener("click", function(){
+    //     root.style.backgroundColor = "#ffffff";
+    //   });
+    // }
+
+    // if (root.style.backgroundColor === "#ffffff"){
+    //   make.addEventListener("click", function(){
+    //     root.style.backgroundColor = "000000";
+    //   });
+    // }
+
+    // console.log(clickValue);
+    // console.log(make);
+    
+  </script>
+  
+  
+</body>
+</html>
