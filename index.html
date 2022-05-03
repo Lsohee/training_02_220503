@@ -25,12 +25,12 @@
     root.appendChild(make);
     
 
-    if( black === "#000000"){
-      make.addEventListener("click", function(){
-        let black = "#fffffff"
-        root.style.backgroundColor = black;
-      });
-    }
+    // if( black === "#000000"){
+    //   make.addEventListener("click", function(){
+    //     let black = "#fffffff"
+    //     root.style.backgroundColor = black;
+    //   });
+    // }
     // if(black === "#ffffff"){
     //   make.style.backgroundColor("click", function(){
     //   let black = "#000000";
@@ -59,6 +59,27 @@
 
     // console.log(clickValue);
     // console.log(make);
+
+
+
+    // if 문의 조건 부분에 root.style.backgroundColor === "#000000"를 썼더니 작동이 안됨 
+    // 조건을 달때는 true와 false 로 구분할 수 있도록 명확하고 간단하게 정리할 것
+    // 먼저 스타일링 하면 엄천 헷갈리니까 꼭 console 로 작동이 되는지 확인하면서 진행 할 것
+
+    let isStatus = true;
+    make.addEventListener("click",function(){
+      if(isStatus === true){
+        console.log("hi");
+        root.style.backgroundColor = "#ffffff"
+        isStatus = false;
+      } else{
+        console.log("bye");
+        root.style.backgroundColor = "#000000"
+        isStatus = true;  
+      }
+    })
+    
+    
     
   </script>
   
